@@ -1,0 +1,225 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem; 
+    padding: 5rem 0; 
+    position: relative; 
+    background-color: var(--bg-color); 
+    overflow: hidden; 
+  }
+
+  
+  
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    justify-content: center;
+    max-width: 50%; 
+    z-index: 2; 
+  }
+  
+  span {
+    color: var(--main-color);
+  }
+  
+  .home-content h1 {
+    font-size: 4.5rem; 
+    font-weight: 700;
+    margin: 0; 
+    line-height: 1.1; 
+  }
+  
+  
+  .home-content h3 {
+    font-size: 3rem; 
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--main-color); 
+  }
+  
+  .home-img {
+    width: 400px; /* Set fixed width to ensure a circle */
+    height: 400px; /* Set fixed height to ensure a circle */
+    border-radius: 50%; /* Ensures the image is circular */
+    border: 3px solid var(--main-color);
+    box-shadow: 0 4px 25px var(--main-color);
+    overflow: hidden; /* Clip the image to fit the circle */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    z-index: 2;
+  }
+  
+  .home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle */
+    display: block;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .home-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px var(--main-color);
+  }
+
+  
+  .home-content p {
+    font-size: 1.4rem;
+    font-weight: 400; 
+    line-height: 1.8;
+    max-width: 600px; 
+    margin-top: 1rem; 
+  }
+  
+  .social-icons {
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+    margin-top: 1.5rem; 
+  }
+  
+  .social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem; 
+    height: 3rem; 
+    border: 2px solid var(--main-color);
+    box-shadow: 0 4px 15px var(--main-color); 
+    border-radius: 50%; 
+    color: var(--bg-color);
+    font-size: 1.5rem; 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; 
+  }
+  
+  .social-icons a:hover {
+    background-color: var(--bg-hover-color); 
+    color: var(--highlight-color); 
+    transform: scale(1.1); 
+  }
+  
+  
+  .btn {
+    align-self: flex-end;
+    padding: 1rem 2.5rem;
+    background: var(--main-color);
+    color: black;
+    border: none;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(28, 146, 138, 0.6);
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+ 
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--main-color);
+  }
+  
+  .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+  }
+  
+  
+  @media (max-width: 1200px) {
+    .home-content h1 {
+      font-size: 5rem;
+    }
+  
+    .home-content h3 {
+      font-size: 2.5rem;
+    }
+  
+    .home {
+      gap: 5rem;
+      padding: 4rem 2rem;
+    }
+  
+    .home-img {
+      width: 40vw;
+      height: 40vw;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .home-content h1 {
+      font-size: 4rem;
+    }
+  
+    .home-content h3 {
+      font-size: 2rem;
+    }
+  
+    .home {
+      gap: 3rem;
+      flex-direction: column;
+      padding: 3rem 0;
+    }
+  
+    .home-img {
+      width: 40vw;
+      height: 40vw;
+      margin-top: 2rem; 
+    }
+  
+    .home-content {
+      max-width: 80%;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-content h1 {
+      font-size: 3rem;
+    }
+  
+    .home-content h3 {
+      font-size: 1.8rem;
+    }
+  
+    .home {
+      padding: 2rem 0;
+    }
+  
+    .home-img {
+      width: 60vw;
+      height: 60vw;
+    }
+  
+    .home-content {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .home-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .home-content h3 {
+      font-size: 1.5rem;
+    }
+  
+    .home {
+      padding: 1.5rem 0;
+    }
+  
+    .home-img {
+      width: 80vw;
+      height: 80vw;
+    }
+  }
+  
